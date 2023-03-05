@@ -228,12 +228,279 @@ console.log(add10(5, 10, 15, 10));
 console.log('Завдання 10')
 
 function makeMessage (name, price) {
-   const message = `You picked ${name}, price per item is ${price} credits`;
+   console.log(`You picked ${name}, price per item is ${price} credits`)
   
-  return message;
 };
 
 makeMessage('Radar', 6150)
 makeMessage('Scanner', 3500)
 makeMessage('Reactor', 8000)
 makeMessage('Engine', 4070)
+
+//Функція calculateTotalPrice рахує і повертає загальну суму 
+//покупки.Вона приймає два параметри, значення яких будуть 
+//задаватися під час її виклику.
+
+// orderedQuantity - кількість одиниць товару в замовленні;
+// pricePerItem - ціна однієї одиниці товару.
+// Доповни код функції таким чином, щоб у змінну totalPrice записувалася загальна сума покупки - результат множення кількості товарів на ціну одного.
+
+// Оголошена функція calculateTotalPrice (orderedQuantity, pricePerItem)
+// Виклик calculateTotalPrice(5, 100) повертає 500
+// Виклик calculateTotalPrice(8, 60) повертає 480
+// Виклик calculateTotalPrice(3, 400) повертає 1200
+// Виклик calculateTotalPrice(1, 3500) повертає 3500
+// Виклик calculateTotalPrice(12, 70) повертає 840
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+console.log('Завдання 11')
+
+
+function calculateTotalPrice11(orderedQuantity11, pricePerItem11) {
+    console.log(orderedQuantity11 * pricePerItem11)
+
+}
+calculateTotalPrice11(5, 100);
+calculateTotalPrice11(8, 60);
+calculateTotalPrice11(3, 400);
+calculateTotalPrice11(1, 3500);
+calculateTotalPrice11(12, 70);
+
+
+//Функція makeOrderMessage(orderedQuantity, pricePerDroid,
+//deliveryFee) складає і повертає повідомлення про покупку
+//ремонтних дроїдів.Вона оголошує три параметри, значення
+//яких будуть задаватися під час її виклику.
+
+// orderedQuantity - кількість дроїдів у замовленні
+// pricePerDroid - ціна одного дроїда
+// deliveryFee - вартість доставки
+// Доповни код функції таким чином, щоб вона повертала повідомлення про замовлення у форматі "You ordered droids worth <total price> credits. Delivery (<delivery fee> credits) is included in total price.". Не забудь про ціну доставки в обчисленнях загальної вартості.
+
+// Оголошена функція makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee)
+// Виклик makeOrderMessage(2, 100, 50) повертає "You ordered droids worth 250 credits. Delivery (50 credits) is included in total price."
+// Виклик makeOrderMessage(4, 300, 100) повертає "You ordered droids worth 1300 credits. Delivery (100 credits) is included in total price."
+// Виклик makeOrderMessage(10, 70, 200) повертає "You ordered droids worth 900 credits. Delivery (200 credits) is included in total price."
+console.log('Завдання 12')
+function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
+    console.log(`You ordered droids worth ${(orderedQuantity * pricePerDroid) + deliveryFee} credits. Delivery (${deliveryFee} credits) is included in total price.`)
+}
+makeOrderMessage(2, 100, 50);
+makeOrderMessage(4, 300, 100);
+makeOrderMessage(10, 70, 200);
+
+
+
+//Функція makeOrderMessage(orderedQuantity, pricePerDroid,
+//deliveryFee) складає і повертає повідомлення про покупку
+//ремонтних дроїдів.Вона оголошує три параметри, значення
+//яких будуть задаватися під час її виклику.
+
+// orderedQuantity - кількість дроїдів у замовленні
+// pricePerDroid - ціна одного дроїда
+// deliveryFee - вартість доставки
+// Доповни код функції таким чином, щоб вона повертала повідомлення про замовлення у форматі "You ordered droids worth <total price> credits. Delivery (<delivery fee> credits) is included in total price.". Не забудь про ціну доставки в обчисленнях загальної вартості.
+
+// Оголошена функція makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee)
+// Виклик makeOrderMessage(2, 100, 50) повертає "You ordered droids worth 250 credits. Delivery (50 credits) is included in total price."
+// Виклик makeOrderMessage(4, 300, 100) повертає "You ordered droids worth 1300 credits. Delivery (100 credits) is included in total price."
+// Виклик makeOrderMessage(10, 70, 200) повертає "You ordered droids worth 900 credits. Delivery (200 credits) is included in total price."
+console.log('Завдання 12')
+function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
+    console.log(`You ordered droids worth ${(orderedQuantity * pricePerDroid) + deliveryFee} credits. Delivery (${deliveryFee} credits) is included in total price.`)
+}
+makeOrderMessage(2, 100, 50);
+makeOrderMessage(4, 300, 100);
+makeOrderMessage(10, 70, 200);
+
+
+// Функція isAdult оголошує один параметр age (вік), 
+//значення якого буде задаватися під час її виклику.
+//Присвой змінній passed вираз перевірки віку користувача на повноліття.
+//Людина вважається повнолітньою у віці 18 років і старше.
+
+// Оголошена функція isAdult(age)
+// У виразі перевірки використовується оператор >=
+// Виклик isAdult(20) повертає true
+// Виклик isAdult(14) повертає false
+// Виклик isAdult(8) повертає false
+// Виклик isAdult(37) повертає true
+
+console.log('Завдання 13')
+
+function isAdult(age) {
+    console.log(age >= 18);
+}
+isAdult(20);
+isAdult(14);
+isAdult(8);
+isAdult(37);
+
+// Функція isValidPassword (password) перевіряє рівність збереженого 
+//і введеного паролів і повертає результат перевірки - буль true або 
+//false.Змінна SAVED_PASSWORD зберігає значення попередньо збереженого
+//пароля.Введений пароль передається у параметр password.
+
+// Присвой змінній isMatch вираз перевірки рівності введених і
+// попередньо збережених паролів.Результатом виразу перевірки повинно
+// бути true, якщо значення збігаються, і false - якщо ні.
+
+// Оголошена функція isValidPassword(password)
+// У виразі перевірки паролів використаний оператор ===
+// Виклик isValidPassword("mangodab3st") повертає false
+// Виклик isValidPassword("kiwirul3z") повертає false
+// Виклик isValidPassword("jqueryismyjam") повертає true
+console.log('Завдання 14') 
+function isValidPassword(password) {
+    const SAVED_PASSWORD = 'jqueryismyjam';
+    const isMatch = SAVED_PASSWORD === password;
+    console.log(isMatch)
+    
+}
+isValidPassword("mangodab3st");
+isValidPassword("kiwirul3z");
+isValidPassword("jqueryismyjam");
+
+
+
+// Додай вираз перевірки повноліття користувача, значення параметра age, 
+//в умову для інструкції if.
+
+// Якщо користувач повнолітній, повинен виконуватися блок if і у 
+//змінну message записується рядок "You are an adult".
+// В іншому випадку повинен виконуватися блок else і записується 
+//рядок "You are a minor".
+// Оголошена функція checkAge(age).
+// У виразі перевірки віку використаний оператор >=
+// Виклик checkAge(20) повертає "You are an adult"
+// Виклик checkAge(8) повертає "You are a minor"
+// Виклик checkAge(14) повертає "You are a minor"
+// Виклик checkAge(38) повертає "You are an adult"
+console.log('Завдання 15')
+
+function checkAge(age) {
+    let ageChe;
+    if (age >= 18) {
+        ageChe = "Повнолітній"
+        
+    } else {
+        ageChe = "Неповнолітній"
+    }
+    console.log(ageChe)
+}
+checkAge(20);
+checkAge(8);
+checkAge(14);
+checkAge(38);
+
+// Функція checkStorage(available, ordered) перевіряє можливість 
+//оформлення замовлення і повертає повідомлення про результат.
+//Вона оголошує два параметри, значення яких будуть задаватися 
+//під час її виклику:
+
+// available - загальна кількість товарів на складі
+// ordered - одиниць товару в замовленні
+// Використовуючи розгалуження, доповни код функції таким чином, що:
+
+// Якщо в замовленні вказане число, яке перевищує кількість товарів на складі, у змінну message записується рядок "Not enough goods in stock!".
+// В іншому випадку записується рядок "Order is processed, our manager will contact you.".
+// Оголошена функція checkStorage(available, ordered).
+// Виклик checkStorage(100, 50) повертає "Order is processed, our manager will contact you."
+// Виклик checkStorage(100, 130) повертає "Not enough goods in stock!"
+// Виклик checkStorage(200, 20) повертає "Order is processed, our manager will contact you."
+// Виклик checkStorage(200, 150) повертає "Order is processed, our manager will contact you."
+// Виклик checkStorage(150, 180) повертає "Not enough goods in stock!"
+console.log('Завдання 16')
+function checkStorage(available, ordered) {
+    let messageS = available >= ordered ? "Order is processed, our manager will contact you." : "Not enough goods in stock!";
+    console.log(messageS)
+}
+
+
+checkStorage(100, 50) 
+checkStorage(100, 130)
+checkStorage(200, 20) 
+checkStorage(200, 150)
+checkStorage(150, 180)
+
+
+// Заміни вирази зі стандартними математичними операторами на комбінований
+// оператор присвоєння з додаванням, відніманням, множенням і діленням.
+
+// Значення змінної a дорівнює 7
+// Використаний оператор +=
+// Значення змінної b дорівнює 6
+// Використаний оператор -=
+// Значення змінної c дорівнює 45
+// Використаний оператор *=
+// Значення змінної d дорівнює 2
+// Використаний оператор /=
+console.log('Завдання 17')
+
+let ageN = 25;
+let ageA = 44;
+let ageI = 55;
+let ageJ = 26;
+let ageL = 11;
+let ageO = 47;
+
+ageN += 7;
+ageA -= 6;
+ageI *= 5;
+ageJ /= 4;
+ageL *= 44;
+ageO -= 55;
+
+console.log(ageN);
+console.log(ageA);
+console.log(ageI);
+console.log(ageJ);
+console.log(ageL);
+console.log(ageO);
+
+
+// Станція з продажу ремонтних дроїдів готова до запуску, залишилося
+//написати програмне забезпечення для відділу продажів.
+
+// Функція makeTransaction(pricePerDroid, orderedQuantity, customerCredits)
+// виконує транзакцію з продажу дроїдів і повертає повідомлення про
+//результат операції.Вона оголошує три параметри, значення яких будуть
+//задаватися під час її виклику:
+
+// pricePerDroid - ціна одного дроїда
+// orderedQuantity - кіл-сть замовлених дроїдів
+// customerCredits - сума коштів на рахунку клієнта
+// Доповни її наступним функціоналом:
+
+// Оголоси змінну totalPrice для зберігання загальної суми замовлення
+// і присвой їй вираз розрахунку цієї суми.
+
+// Додай перевірку, чи зможе клієнт оплатити замовлення:
+
+// якщо сума до сплати перевищує кількість кредитів на рахунку клієнта,
+// запиши у змінну message рядок "Insufficient funds!";
+// в іншому випадку, відніми суму покупки з рахунку клієнта і запиши у змінну message повідомлення: "You ordered <число> droids, you have <число> credits left".
+// Оголошена функція makeTransaction(pricePerDroid, orderedQuantity, customerCredits)
+// Виклик makeTransaction(3000, 5, 23000) повертає "You ordered 5 droids, you have 8000 credits left"
+// Виклик makeTransaction(1000, 3, 15000) повертає "You ordered 3 droids, you have 12000 credits left"
+// Виклик makeTransaction(5000, 10, 8000) повертає "Insufficient funds!"
+// Виклик makeTransaction(2000, 8, 10000) повертає "Insufficient funds!"
+// Виклик makeTransaction(500, 10, 5000) повертає "You ordered 10 droids, you have 0 credits left"
+console.log('Завдання 18')
+function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
+    let message18;
+
+    const totalPrice18 = pricePerDroid * orderedQuantity;
+    if (totalPrice18 > customerCredits) {
+        message18 = "Insufficient funds!";
+    } else if(customerCredits -= totalPrice18) {
+        message18 = `You ordered ${orderedQuantity} droids, you have ${customerCredits} credits left`
+    } else {
+        message18 = `You ordered ${orderedQuantity} droids, you have ${customerCredits} credits left`
+    }
+    console.log(message18)
+}
+makeTransaction(3000, 5, 23000);
+makeTransaction(1000, 3, 15000);
+makeTransaction(5000, 10, 8000);
+makeTransaction(2000, 8, 10000);
+makeTransaction(500, 10, 5000);
