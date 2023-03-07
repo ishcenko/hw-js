@@ -1,5 +1,6 @@
 
 console.log('Завдання 0')
+console.log('   ')
 const a = 10;
 const b = 20;
 const c = a * b;
@@ -20,6 +21,7 @@ console.log(d);
 // Оголошена змінна pricePerItem
 // Значення змінної pricePerItem - це число 2000
 console.log('Завдання 1')
+console.log('   ')
 const productName1 = 'Droid';
 const pricePerItem1 = 2000;
 console.log(`Hазвa товару ${productName1} ціна за 1 штуку ${pricePerItem1}`)
@@ -37,6 +39,7 @@ console.log(`Hазвa товару ${productName1} ціна за 1 штуку ${
 // При оголошенні змінної productName присвоєно значення — рядок "Droid"
 // Змінній productName присвоєно нове значення — рядок "Repair droid"
 console.log('Завдання 2')
+console.log('   ')
 let productName2 = 'Repair droid';
 let pricePerItem2 = 2000;
 
@@ -64,6 +67,7 @@ console.log(`${productName2}, ${pricePerItem2}`)
 //Оголошена змінна isAdmin
 //Значення змінної isAdmin - це буль false
 console.log('Завдання 3')
+console.log('   ')
 const topSpeed = 160;
 const distance = 617.54;
 const login = 'mango935';
@@ -91,6 +95,7 @@ console.log(isAdmin);
 // Значення змінної totalPrice - це число 14000
 // Використаний оператор *
 console.log('Завдання 4')
+console.log('   ')
 let pricePerItem4 = 3500;
 let orderedQuantity = 4;
 let totalPrice = pricePerItem4 * orderedQuantity;
@@ -111,6 +116,7 @@ console.log(`Сума ${totalPrice} кредитів`)
 // Оголошена змінна message
 // Значення змінної message - це рядок "You picked Droid, price per item is 3500 credits"
 console.log('Завдання 5')
+console.log('   ')
 let productName5 = 'Droid';
 let pricePerItem5 = 3500
 let message = `You picked ${productName5}, price per item is ${pricePerItem5} credits`;
@@ -136,6 +142,7 @@ console.log(message)
 // Оголошена змінна message
 // Значення змінної message - це рядок "You ordered droids worth 4850 credits. Delivery (50 credits) is included in total price."
 console.log('Завдання 6')
+console.log('   ')
 let pricePerDroid6 = 800;
 let orderedQuantity6 = 6;
 let delivery6 = 50;
@@ -152,6 +159,7 @@ console.log(message6)
 // В тілі функції sayHi є console.log("Hello, this is my first function!")
 // Після оголошення є виклик функції sayHi
 console.log('Завдання 7')
+console.log('   ')
 function sayHi() {
     console.log("Hello, this is my first function!");
 }
@@ -171,6 +179,7 @@ sayHi();
 // Виклик add(10, 20, 30) виводить у консоль "Addition result equals 60"
 // Виклик add(5, 10, 15) виводить у консоль "Addition result equals 30"
 console.log('Завдання 8')
+console.log('   ')
 function add(a, b, c) {
     console.log(`Addition result equals ${a + b + c} and ${a * b + c}`);
 }
@@ -190,6 +199,7 @@ add(25, 65, 55)
 // Виклик функції з випадковими, але валідними аргументами, 
 //повертає правильне значення
 console.log('Завдання 9')
+console.log('   ')
 function add9(a, b, c, d) {
     
     return a + b * c / d;
@@ -226,6 +236,7 @@ console.log(add10(5, 10, 15, 10));
 // Виклик makeMessage('Engine', 4070) повертає "You picked Engine, price per item is 4070 credits"
 
 console.log('Завдання 10')
+console.log('   ')
 
 function makeMessage (name, price) {
    console.log(`You picked ${name}, price per item is ${price} credits`)
@@ -253,6 +264,7 @@ makeMessage('Engine', 4070)
 // Виклик calculateTotalPrice(12, 70) повертає 840
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 console.log('Завдання 11')
+console.log('   ')
 
 
 function calculateTotalPrice11(orderedQuantity11, pricePerItem11) {
@@ -281,6 +293,7 @@ calculateTotalPrice11(12, 70);
 // Виклик makeOrderMessage(4, 300, 100) повертає "You ordered droids worth 1300 credits. Delivery (100 credits) is included in total price."
 // Виклик makeOrderMessage(10, 70, 200) повертає "You ordered droids worth 900 credits. Delivery (200 credits) is included in total price."
 console.log('Завдання 12')
+console.log('   ')
 function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
     console.log(`You ordered droids worth ${(orderedQuantity * pricePerDroid) + deliveryFee} credits. Delivery (${deliveryFee} credits) is included in total price.`)
 }
@@ -305,6 +318,7 @@ makeOrderMessage(10, 70, 200);
 // Виклик makeOrderMessage(4, 300, 100) повертає "You ordered droids worth 1300 credits. Delivery (100 credits) is included in total price."
 // Виклик makeOrderMessage(10, 70, 200) повертає "You ordered droids worth 900 credits. Delivery (200 credits) is included in total price."
 console.log('Завдання 12')
+console.log('   ')
 function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
     console.log(`You ordered droids worth ${(orderedQuantity * pricePerDroid) + deliveryFee} credits. Delivery (${deliveryFee} credits) is included in total price.`)
 }
@@ -326,6 +340,7 @@ makeOrderMessage(10, 70, 200);
 // Виклик isAdult(37) повертає true
 
 console.log('Завдання 13')
+console.log('   ')
 
 function isAdult(age) {
     console.log(age >= 18);
@@ -350,6 +365,7 @@ isAdult(37);
 // Виклик isValidPassword("kiwirul3z") повертає false
 // Виклик isValidPassword("jqueryismyjam") повертає true
 console.log('Завдання 14') 
+console.log('   ')
 function isValidPassword(password) {
     const SAVED_PASSWORD = 'jqueryismyjam';
     const isMatch = SAVED_PASSWORD === password;
@@ -376,6 +392,7 @@ isValidPassword("jqueryismyjam");
 // Виклик checkAge(14) повертає "You are a minor"
 // Виклик checkAge(38) повертає "You are an adult"
 console.log('Завдання 15')
+console.log('   ')
 
 function checkAge(age) {
     let ageChe;
@@ -410,6 +427,7 @@ checkAge(38);
 // Виклик checkStorage(200, 150) повертає "Order is processed, our manager will contact you."
 // Виклик checkStorage(150, 180) повертає "Not enough goods in stock!"
 console.log('Завдання 16')
+console.log('   ')
 function checkStorage(available, ordered) {
     let messageS = available >= ordered ? "Order is processed, our manager will contact you." : "Not enough goods in stock!";
     console.log(messageS)
@@ -435,6 +453,7 @@ checkStorage(150, 180)
 // Значення змінної d дорівнює 2
 // Використаний оператор /=
 console.log('Завдання 17')
+console.log('   ')
 
 let ageN = 25;
 let ageA = 44;
@@ -486,6 +505,7 @@ console.log(ageO);
 // Виклик makeTransaction(2000, 8, 10000) повертає "Insufficient funds!"
 // Виклик makeTransaction(500, 10, 5000) повертає "You ordered 10 droids, you have 0 credits left"
 console.log('Завдання 18')
+console.log('   ')
 function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
     let message18;
 
@@ -504,3 +524,127 @@ makeTransaction(1000, 3, 15000);
 makeTransaction(5000, 10, 8000);
 makeTransaction(2000, 8, 10000);
 makeTransaction(500, 10, 5000);
+
+// Функція checkPassword(password) отримує пароль користувача в 
+//параметр password, перевіряє його на збіг з паролем адміністратора у 
+//змінній ADMIN_PASSWORD і повертає повідомлення про результат порівняння, 
+//яке зберігається у змінній message.
+
+// Якщо значення параметра password дорівнює null, значить користувач скасував операцію і в message записується рядок "Canceled by user!".
+// Якщо значення параметра password збігається зі значенням ADMIN_PASSWORD, у змінну message присвоюється рядок "Welcome!".
+// Якщо жодна з попередніх умов не виконалася, у змінну message записується рядок "Access denied, wrong password!".
+// Оголошена функція checkPassword(password)
+// Виклик checkPassword("mangohackzor") повертає "Access denied, wrong password!"
+// Виклик checkPassword(null) повертає "Canceled by user!"
+// Виклик checkPassword("polyhax") повертає "Access denied, wrong password!"
+// Виклик checkPassword("jqueryismyjam") повертає "Welcome!"
+console.log('   ')
+console.log('Завдання 19')
+
+console.log('   ')
+function checkPassword(password) {
+    const ADMIN_PASSWORD = 'jqueryismyjam';
+    let message19;
+    if (password === 'jqueryismyjam') {
+        message19 = "Welcome!";
+    } else if (password === null) {
+        message19 = 'Canceled by user!';
+    } else {
+        message19 = "Access denied, wrong password!";
+    }
+    console.log(message19);
+    // return message19;
+}
+
+// console.log(checkPassword)
+checkPassword("jqueryismyjam");
+checkPassword("mangohackzor");
+checkPassword(null);
+checkPassword("polyhax");
+
+// Функція checkStorage(available, ordered) перевіряє можливість оформлення
+//замовлення і повертає повідомлення про результат.Вона оголошує два параметри,
+// значення яких будуть задаватися під час її виклику.
+
+// available - доступна кількість товарів на складі
+// ordered - одиниць товару в замовленні
+// Використовуючи розгалуження, доповни код функції таким чином, що:
+
+// Якщо в замовленні ще немає товарів, тобто значення параметра ordered дорівнює
+//0, у змінну message присвоюється рядок "There are no products in the order!".
+
+// Якщо товарів у замовленні більше, ніж доступно товарів на складі, то у
+//змінну message присвоюється рядок "Your order is too large, there are not
+//enough items in stock!".
+
+// В іншому випадку у змінну message присвоюється рядок "The order is
+//accepted, our manager will contact you".
+
+// Оголошена функція checkStorage(available, ordered)
+
+// Виклик checkStorage(100, 50) повертає "The order is accepted,
+//our manager will contact you"
+
+// Виклик checkStorage(100, 130) повертає "Your order is too large,
+//there are not enough items in stock!"
+
+// Виклик checkStorage(70, 0)повертає "There are no products in the order!"
+
+// Виклик checkStorage(200, 20) повертає "The order is accepted, our
+//manager will contact you"
+
+// Виклик checkStorage(200, 250) повертає "Your order is too large,
+//there are not enough items in stock!"
+
+// Виклик checkStorage(150, 0) повертає "There are no products in the order!"
+console.log('   ')
+console.log('Завдання 20')
+console.log('   ')
+
+function checkStorage(available, ordered) {
+    let message20;
+    if (ordered === 0) {
+        message20 = "There are no products in the order!";
+    } else if (ordered > available) {
+        message20 = "Your order is too large, there are not enough items in stock!";
+    } else { message20 = "The order is accepted, our manager will contact you" }
+
+    console.log(message20);
+}
+
+checkStorage(100, 50);
+checkStorage(100, 130);
+checkStorage(200, 250);
+checkStorage(200, 20);
+checkStorage(70, 0);
+
+// Функція isNumberInRange(start, end, number) перевіряє, чи входить число у
+//проміжок.Вона оголошує три параметри, значення яких будуть задаватися під 
+//час її виклику:
+
+// number - число, входження якого перевіряється
+// start - початок числового проміжку
+// end - кінець числового проміжку
+// Присвой змінній isInRange вираз перевірки входження number у 
+//числовий проміжок від start до end.Тобто число повинно бути більшим 
+//або дорівнювати start, і меншим або дорівнювати end.Результатом 
+//виразу перевірки буде буль true або false.
+
+// Оголошена функція isNumberInRange(start, end, number)
+// У виразі перевірки використаний оператор &&
+// Виклик isNumberInRange(10, 30, 17) повертає true
+// Виклик isNumberInRange(10, 30, 5) повертає false
+// Виклик isNumberInRange(20, 50, 24) повертає true
+// Виклик isNumberInRange(20, 50, 76) повертає false
+console.log('   ')
+console.log('Завдання 20')
+console.log('   ')
+function isNumberInRange(start, end, number) {
+    let isInRange = start>= number;
+
+}
+
+isNumberInRange(10, 30, 17);
+isNumberInRange(10, 30, 5);
+isNumberInRange(20, 50, 24);
+isNumberInRange(20, 50, 76);
