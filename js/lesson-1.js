@@ -637,10 +637,11 @@ checkStorage(70, 0);
 // Виклик isNumberInRange(20, 50, 24) повертає true
 // Виклик isNumberInRange(20, 50, 76) повертає false
 console.log('   ')
-console.log('Завдання 20')
+console.log('Завдання 21')
 console.log('   ')
 function isNumberInRange(start, end, number) {
-    let isInRange = start>= number;
+    let isInRange = number>=start && number<=end;
+    console.log(isInRange)
 
 }
 
@@ -648,3 +649,452 @@ isNumberInRange(10, 30, 17);
 isNumberInRange(10, 30, 5);
 isNumberInRange(20, 50, 24);
 isNumberInRange(20, 50, 76);
+
+
+// Функція checkIfCanAccessContent(subType) перевіряє, чи може користувач 
+//отримати доступ до контенту.Перевірка відбувається за типом передплати.
+//Отримати доступ можуть тільки користувачі з передплатою pro або vip.
+
+// Присвой змінній canAccessContent вираз перевірки передплати. 
+//Якщо значення параметра subType дорівнює рядкам "pro" або "vip",
+// користувач отримає доступ.Результатом виразу перевірки буде буль true або false.
+
+// Оголошена функція checkIfCanAccessContent(subType)
+// У виразі перевірки використаний оператор ||
+// Виклик checkIfCanAccessContent("pro") повертає true
+// Виклик checkIfCanAccessContent("starter") повертає false
+// Виклик checkIfCanAccessContent("vip") повертає true
+// Виклик checkIfCanAccessContent("free") повертає false
+
+console.log('   ')
+console.log('Завдання 22')
+console.log('   ')
+
+function checkIfCanAccessContent22(subType) {
+    const checkIfCanAccessContent22 = subType === 'pro' || subType === 'vip';
+console.log(checkIfCanAccessContent22)
+}
+
+checkIfCanAccessContent22("pro");
+checkIfCanAccessContent22("starter");
+checkIfCanAccessContent22("vip");
+checkIfCanAccessContent22("free");
+
+
+
+
+// Функція isNumberNotInRange(start, end, number) перевіряє, чи не входить 
+//число у проміжок.Тобто число повинно бути меншим або дорівнювати start і 
+//більшим або дорівнювати end.Результатом виразу перевірки буде буль 
+//true або false.
+
+// Вона оголошує три параметри, значення яких будуть задаватися під час її виклику:
+
+// number - число, невходження якого перевіряється
+// start - початок числового проміжку
+// end - кінець числового проміжку
+// Присвой змінній isNotInRange вираз інверсії значення змінної isInRange, 
+//використовуючи оператор!.
+
+// Оголошена функція isNumberNotInRange(start, end, number)
+// У виразі використаний оператор !
+// Виклик isNumberNotInRange(10, 30, 17) повертає false
+// Виклик isNumberNotInRange(10, 30, 5) повертає true
+// Виклик isNumberNotInRange(20, 50, 24) повертає false
+// Виклик isNumberNotInRange(20, 50, 76) повертає true
+console.log('   ')
+console.log('Завдання 23')
+console.log('   ')
+
+function isNumberNotInRange23(start, end, number) {
+    const isInRange23 = number >= start && number <= end;
+    const isNotInRange23 = !isInRange23;
+    console.log(isNotInRange23)
+}
+
+
+
+isNumberNotInRange23(10, 30, 17);
+isNumberNotInRange23(10, 30, 5);
+isNumberNotInRange23(20, 50, 24);
+isNumberNotInRange23(20, 50, 76);
+
+
+// Функція getDiscount(totalSpent) визначає значення знижки, залежно від
+//загальної суми витрачених грошей(параметр totalSpent) в магазині за
+//весь час(партнерська програма).Знижка записується у змінну discount
+//і повертається з функції як результат її роботи.
+
+// Використовуючи розгалуження і логічні оператори, доповни код функції.
+
+// Якщо витрачено від 50000 (включно) або більше кредитів - знижка 10%
+//(золотий партнер)
+
+// Якщо витрачено від 20000 (включно) до 50000 кредитів - знижка 5%
+//(срібний партнер)
+
+// Якщо витрачено від 5000 (включно) до 20000 кредитів - знижка 2%
+//(бронзовий партнер)
+
+// Якщо витрачено менше 5000 кредитів - знижка 0 (базовий партнер)
+
+// Значення знижок кожного рівня зберігаються в однойменних константах
+//BASE_DISCOUNT, BRONZE_DISCOUNT, SILVER_DISCOUNT і GOLD_DISCOUNT.
+
+// Оголошена функція getDiscount(totalSpent)
+// Виклик getDiscount(137000) повертає 0.1
+// Виклик getDiscount(46900) повертає 0.05
+// Виклик getDiscount(8250) повертає 0.02
+// Виклик getDiscount(1300) повертає 0
+// Виклик getDiscount(5000) повертає 0.02
+// Виклик getDiscount(20000) повертає 0.05
+// Виклик getDiscount(50000) повертає 0.1
+
+console.log('   ')
+console.log('Завдання 24')
+console.log('   ')
+function getDiscount24(totalSpent) {
+    const GOLD_DISCOUNT = 0.1;
+    const SILVER_DISCOUNT = 0.05;
+    const BRONZE_DISCOUNT = 0.02;
+    const BASE_DISCOUNT = 0;
+    let discount
+    if (totalSpent >= 50000) {
+        discount = GOLD_DISCOUNT
+    } else if (totalSpent >= 20000 && totalSpent < 50000) {
+        discount = SILVER_DISCOUNT
+    } else if (totalSpent >= 5000 && totalSpent <= 20000) {
+        discount = BRONZE_DISCOUNT
+    } else if (totalSpent < 5000) {
+        discount = BASE_DISCOUNT
+    }
+console.log(discount)
+}
+
+
+getDiscount24(137000);
+getDiscount24(46900);
+getDiscount24(8250);
+getDiscount24(1300);
+getDiscount24(5000);
+getDiscount24(20000);
+getDiscount24(50000);
+
+
+// Виконай рефакторинг рішення задачі «Склад товарів», замінивши інструкцію if...else 
+//тернарним оператором.
+
+// Оголошена функція checkStorage(available, ordered).
+// Використаний тернарний оператор.
+// Виклик checkStorage(100, 50) повертає "The order is accepted, our manager will contact you"
+// Виклик checkStorage(100, 130) повертає "Not enough goods in stock!"
+// Виклик checkStorage(200, 20) повертає "The order is accepted, our manager will contact you"
+// Виклик checkStorage(200, 150) повертає "The order is accepted, our manager will contact you"
+// Виклик checkStorage(150, 180) повертає "Not enough goods in stock!"
+
+
+console.log('   ')
+console.log('Завдання 25')
+console.log('   ')
+
+function checkStorage25(available, ordered) {
+    let message25 = available >= ordered ? "The order is accepted, our manager will contact you" : "Not enough goods in stock!"
+console.log(message25)
+}
+checkStorage25(100, 50) 
+checkStorage25(100, 130)
+checkStorage25(200, 20) 
+checkStorage25(200, 150)
+checkStorage25(150, 180)
+
+// Функція checkPassword(password) порівнює переданий їй пароль (параметр password) зі 
+//збереженим паролем адміністратора(константа ADMIN_PASSWORD) і повертає рядок з 
+//повідомленням про результат.
+
+// Використовуючи тернарний оператор, доповни функцію таким чином, що:
+
+// Якщо значення password і ADMIN_PASSWORD збігаються, присвой змінній message рядок "Access is allowed".
+// В іншому випадку, присвой message рядок "Access denied, wrong password!".
+// Оголошена функція checkPassword(password)
+// Використаний тернарний оператор
+// Виклик checkPassword("jqueryismyjam") повертає "Access is allowed"
+// Виклик checkPassword("angul4r1sl1f3") повертає "Access denied, wrong password!"
+// Виклик checkPassword("r3actsux") повертає "Access denied, wrong password!"
+
+console.log('   ')
+console.log('Завдання 26')
+console.log('   ')
+
+function checkPassword26(password) {
+    const ADMIN_PASSWORD = 'jqueryismyjam';
+    let message26 = ADMIN_PASSWORD === password ? "Access is allowed" : "Access denied, wrong password!";
+    console.log(message26)
+}
+checkPassword26("jqueryismyjam");
+checkPassword26("angul4r1sl1f3");
+checkPassword26("r3actsux");
+
+
+
+
+
+
+
+
+// Функція getSubscriptionPrice(type) отримує рядок з типом передплати
+//користувача(параметр type), перевіряє її на збіг з трьома можливими 
+//типами щомісячної передплати та повертає ціну, що зберігається у 
+//змінній price.
+
+// Якщо значення параметра type - це рядок:
+
+// "starter" - ціна передплати 0 кредитів.
+// "professional" - ціна передплати 20 кредитів.
+// "organization" - ціна передплати 50 кредитів.
+// Спочатку в тілі функції була інструкція if...else, яка виглядала ось так.
+
+// if (type === "starter") {
+//   price = 0;
+// } else if (type === "professional") {
+//   price = 20;
+// } else if (type === "organization") {
+//   price = 50;
+// }
+// Після рефакторингу інструкція if..else була замінена на switch.
+// Доповни код інструкції switch, щоб функція працювала правильно.
+
+// Оголошена функція getSubscriptionPrice(type)
+// Виклик getSubscriptionPrice("professional") повертає число 20
+// Виклик getSubscriptionPrice("organization") повертає число 50
+// Виклик getSubscriptionPrice("starter") повертає число 0
+console.log('   ')
+console.log('Завдання 27')
+console.log('   ')
+
+function getSubscriptionPrice27(type) {
+    let price27;
+    switch (type) {
+        case "starter":
+            price27 = 0;
+            break;
+        
+        case "professional":
+            price27 = 50;
+            break;
+        
+        case "organization":
+            price27 = 20;
+            break;
+        
+        
+    }
+    console.log(price27);
+}
+getSubscriptionPrice27("starter");
+getSubscriptionPrice27("professional");
+getSubscriptionPrice27("organization");
+
+
+// Функція checkPassword(password) отримує пароль в параметр password,
+//перевіряє його на збіг з паролем адміністратора у змінній ADMIN_PASSWORD
+// і повертає повідомлення про результат порівняння, яке зберігається у
+// змінній message.
+
+// Якщо значення параметра password:
+
+// дорівнює null, значить користувач скасував операцію і в message
+//записується рядок "Canceled by user!".
+
+// збігається зі значенням ADMIN_PASSWORD, у змінну message присвоюється
+//рядок "Welcome!".
+
+// не задовольняє жодну з попередніх умов, у змінну message записується рядок
+//"Access denied, wrong password!".
+
+// Зроби рефакторинг коду, замінивши інструкцію if..else на switch, і не 
+//забудь про блок default (аналог else).
+
+// Оголошена функція checkPassword(password)
+// Виклик checkPassword("mangohackzor") повертає "Access denied, wrong password!"
+// Виклик checkPassword(null) повертає "Canceled by user!"
+// Виклик checkPassword("polyhax") повертає "Access denied, wrong password!"
+// Виклик checkPassword("jqueryismyjam") повертає "Welcome!"
+console.log('   ')
+console.log('Завдання 28')
+console.log('   ')
+function checkPassword28(password) {
+    const ADMIN_PASSWORD28 = 'mangohackzor';
+    let message28;
+    switch (password) {
+        case null:
+            message28 = "Canceled by user!";
+            break;
+        
+        case ADMIN_PASSWORD28:
+            message28 = "Welcome";
+            break;
+        
+        default:
+            message28 = "Access denied, wrong password!";
+    }
+        console.log(message28)
+}
+
+checkPassword28("mangohackzor");
+checkPassword28(null);
+checkPassword28("polyhax");
+checkPassword28("jqueryismyjam");
+
+// Функція getShippingCost(country) повинна перевіряти можливість доставки товару в країну користувача (параметр country) і повертати повідомлення про результат, що зберігається у змінній message. Обов'язково використовуй інструкцію switch.
+
+// Формат рядка, що повертається "Shipping to <country> will cost <price> credits", де замість <country> і <price>, необхідно підставити відповідні значення.
+
+// Список країн і вартість доставки:
+
+// China - 100 кредитів
+// Chile - 250 кредитів
+// Australia - 170 кредитів
+// Jamaica - 120 кредитів
+// Зі списку видно, що доставка можлива не скрізь. Якщо зазначена країна відсутня у списку, то функція повинна повернути рядок "Sorry, there is no delivery to your country"
+
+// Оголошена функція getShippingCost(country)
+// В тілі функції використана інструкція switch
+// Виклик getShippingCost("Australia") повертає "Shipping to Australia will cost 170 credits"
+// Виклик getShippingCost("Germany") повертає "Sorry, there is no delivery to your country"
+// Виклик getShippingCost("China") повертає "Shipping to China will cost 100 credits"
+// Виклик getShippingCost("Chile") повертає "Shipping to Chile will cost 250 credits"
+// Виклик getShippingCost("Jamaica") повертає "Shipping to Jamaica will cost 120 credits"
+// Виклик getShippingCost("Sweden") повертає "Sorry, there is no delivery to your country"
+
+console.log('   ')
+console.log('Завдання 29')
+console.log('   ')
+
+function getShippingCost29(country) {
+    let message29;
+    switch (country) {
+        case "Australia":
+            message29 = `Shipping to ${country} will cost 170 credits`;
+            break;
+        case 'China':
+            message29 = `Shipping to ${country} will cost 100 credits`;
+            break;
+        case "Chile":
+            message29 = `Shipping to ${country} will cost 250 credits`;
+            break;
+        case "Jamaica":
+            message29 = `Shipping to ${country} will cost 120 credits`;
+            break;
+        default:
+            message29 = `Sorry, there is no delivery to your ${country}`;
+
+    }
+console.log(message29)
+}
+
+getShippingCost29("Australia");
+getShippingCost29("Germany");
+getShippingCost29("China");
+getShippingCost29("Chile");
+getShippingCost29("Jamaica");
+getShippingCost29("Sweden");
+
+
+// Функція getNameLength(name) приймає ім'я (параметр name) і повертає рядок, в якому вказана його довжина. Доповни шаблонний рядок у змінній message довжиною рядка з параметра name.
+
+// Оголошена функція getNameLength(name)
+// Виклик функції getNameLength("Poly") повертає "Name Poly is 4 characters long"
+// Виклик функції getNameLength("Harambe") повертає "Name Harambe is 6 characters long"
+// Виклик функції getNameLength("Billy") повертає "Name Billy is 5 characters long"
+// Виклик функції getNameLength("Joe") повертає "Name Joe is 3 characters long"
+console.log('   ')
+console.log('Завдання 30')
+console.log('   ')
+function getNameLength30(name) {
+    let message30 = `Name ${name} is ${name.length} characters long`
+    console.log(message30);
+
+}
+
+getNameLength30("Poly");
+getNameLength30("Harambe");
+getNameLength30("Billy");
+getNameLength30("Joe");
+
+
+
+// Доповни код, присвоївши оголошеним змінним вирази звертання до 
+//відповідних елементів або властивостей рядка у змінній course.
+
+// courseTopicLength - довжина рядка.
+// firstElement - перший символ рядка.
+// lastElement - останній символ рядка.
+// Оголошена змінна courseTopic
+// Значення змінної courseTopic - це рядок "JavaScript essentials"
+// Оголошена змінна courseTopicLength
+// Значення змінної courseTopicLength - це число 21
+// Оголошена змінна firstElement
+// Значення змінної firstElement - це рядок "J"
+// Оголошена змінна lastElement
+// Значення змінної lastElement - це рядок "s"
+console.log('   ')
+console.log('Завдання 31')
+console.log('   ')
+const courseTopic = "JavaScript essentials";
+// Change code below this line
+
+const courseTopicLength = courseTopic.length;
+const firstElement = courseTopic[0];
+const lastElement = courseTopic[courseTopic.length - 1];
+
+// Change code above this line
+console.log(courseTopic);
+console.log(courseTopicLength);
+console.log(firstElement);
+console.log(lastElement);
+
+
+// Функція getSubstring(string, length) приймає рядок і повертає підрядок від початку і до length символів. Вона оголошує два параметри, значення яких будуть задаватися під час її виклику:
+
+// string - оригінальний рядок
+// length - кількість символів з початку рядка для підрядка
+// Присвой змінній substring вираз створення підрядка довжиною length символів (від початку) з рядка string.
+
+// Оголошена функція getSubstring(string, length)
+// Виклик функції getSubstring("Hello world", 3) повертає "Hel"
+// Виклик функції getSubstring("Hello world", 6) повертає "Hello"
+// Виклик функції getSubstring("Hello world", 8) повертає "Hello wo"
+// Виклик функції getSubstring("Hello world", 11) повертає "Hello world"
+// Виклик функції getSubstring("Hello world", 0) повертає ""
+
+console.log("    ");
+console.log('Завдання 32')
+console.log('   ')
+function getSubstring(string, length) {
+    
+}
+
+
+
+
+
+
+
+
+
+// Функція checkForSpam(message) приймає рядок (параметр message), перевіряє його на вміст заборонених слів spam і sale, і повертає результат перевірки. Слова в рядку параметра message можуть бути у довільному регістрі, наприклад SPAM або sAlE.
+
+// Якщо знайшли заборонене слово (spam або sale) то функція повертає буль true.
+// Якщо в рядку відсутні заборонені слова, функція повертає буль false.
+// Оголошена функція checkForSpam(message).
+// Виклик функції checkForSpam("Latest technology news") повертає false
+// Виклик функції checkForSpam("JavaScript weekly newsletter")повертає false
+// Виклик функції checkForSpam("Get best sale offers now!") повертає true
+// Виклик функції checkForSpam("Amazing SalE, only tonight!") повертає true
+// Виклик функції checkForSpam("Trust me, this is not a spam message") повертає true
+// Виклик функції checkForSpam("Get rid of sPaM emails. Our book in on sale!") повертає true
+// Виклик функції checkForSpam("[SPAM] How to earn fast money?") повертає true
+
+console.log('   ')
+console.log('Завдання 36')
+console.log('   ')
