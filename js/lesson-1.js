@@ -1081,12 +1081,46 @@ getSubstring32("Hello world", 3);
 getSubstring32("Hello world", 6);
 getSubstring32("Hello world", 8);
 getSubstring32("Hello world", 11);
-getSubstring32("Hello world", 0);
+getSubstring32("Hello world", 1);
 
 
 
+// Функція formatMessage(message, maxLength) приймає рядок(параметр message)
+// і форматує його, якщо довжина перевищує значення в параметрі maxLength.
 
+// Доповни код функції таким чином, що якщо довжина рядка:
 
+// не перевищує maxLength, функція повертає його в початковому вигляді.
+// більша за maxLength, то функція обрізає рядок до maxLength символів і додає в кінець три крапки "...", після чого повертає скорочену версію.
+// Оголошена функція formatMessage(message, maxLength)
+// Виклик функції formatMessage("Curabitur ligula sapien", 16) повертає "Curabitur ligula..."
+// Виклик функції formatMessage("Curabitur ligula sapien", 23) повертає "Curabitur ligula sapien"
+// Виклик функції formatMessage("Vestibulum facilisis purus nec", 20) повертає "Vestibulum facilisis..."
+// Виклик функції formatMessage("Vestibulum facilisis purus nec", 30) повертає "Vestibulum facilisis purus nec"
+// Виклик функції formatMessage("Nunc sed turpis a felis in nunc fringilla", 15) повертає "Nunc sed turpis..."
+// Виклик функції formatMessage("Nunc sed turpis a felis in nunc fringilla", 41) повертає "Nunc sed turpis a felis in nunc fringilla"
+console.log("    ");
+console.log('Завдання 33')
+console.log('   ')
+function formatMessage33(message, maxLength) {
+    let result33
+    
+    if (message.length > maxLength) {
+        result33 = message.slice(0, maxLength) + '...';
+    } else result33 = message;
+    
+    console.log(result33);
+
+    console.log(message.length);
+}
+return result33;
+formatMessage33("Curabitur ligula sapien", 16)
+formatMessage33("Виклик функції formatMessage(Vestibulum facilisis purus nec, 20)", 100)
+formatMessage33("Curabitur ligula sapien", 23)
+formatMessage33("Vestibulum facilisis purus nec", 20)
+formatMessage33("Vestibulum facilisis purus nec", 30)
+formatMessage33("Nunc sed turpis a felis in nunc fringilla", 15)
+formatMessage33("Nunc sed turpis a felis in nunc fringilla", 41)
 
 
 // Функція checkForSpam(message) приймає рядок (параметр message), перевіряє його на вміст заборонених слів spam і sale, і повертає результат перевірки. Слова в рядку параметра message можуть бути у довільному регістрі, наприклад SPAM або sAlE.
