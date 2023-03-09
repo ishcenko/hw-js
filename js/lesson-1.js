@@ -1054,7 +1054,9 @@ console.log(firstElement);
 console.log(lastElement);
 
 
-// Функція getSubstring(string, length) приймає рядок і повертає підрядок від початку і до length символів. Вона оголошує два параметри, значення яких будуть задаватися під час її виклику:
+// Функція getSubstring(string, length) приймає рядок і повертає підрядок 
+//від початку і до length символів.Вона оголошує два параметри, 
+//значення яких будуть задаватися під час її виклику:
 
 // string - оригінальний рядок
 // length - кількість символів з початку рядка для підрядка
@@ -1070,11 +1072,16 @@ console.log(lastElement);
 console.log("    ");
 console.log('Завдання 32')
 console.log('   ')
-function getSubstring(string, length) {
-    
+function getSubstring32(string, length) {
+    const substring32 = string.slice(0, length);
+console.log(substring32)    // console.log(string.slise(0, length));
 }
 
-
+getSubstring32("Hello world", 3);
+getSubstring32("Hello world", 6);
+getSubstring32("Hello world", 8);
+getSubstring32("Hello world", 11);
+getSubstring32("Hello world", 0);
 
 
 
