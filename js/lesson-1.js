@@ -1139,3 +1139,43 @@ formatMessage33("Nunc sed turpis a felis in nunc fringilla", 41)
 console.log('   ')
 console.log('Завдання 36')
 console.log('   ')
+
+
+
+// Перебери об'єкт apartment, використовуючи метод Object.keys() і цикл for...of. 
+//Запиши у змінну keys масив ключів власних властивостей об'єкта apartment, 
+//і додай в масив values всі значення його властивостей.
+
+// Оголошена змінна apartment.
+// Значення змінної apartment - це об'єкт.
+// Оголошена змінна keys.
+// Значення змінної keys - це масив ["descr", "rating", "price"].
+// Значення змінної keys отримане за допомогою методу Object.keys().
+// Оголошена змінна values.
+// Значення змінної values - це масив ["Spacious apartment in the city center", 4, 2153].
+// Значення змінної values отримане за допомогою циклу for...of.
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// // Change code below this line
+// const keys = apartment;
+
+
+
+const apartment = {
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+};
+// Change code below this line
+const keys = Object.keys(apartment);
+const values = Object.values(apartment);
+
+
+
+
+
