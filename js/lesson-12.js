@@ -19,3 +19,26 @@ function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
 makeOrderMessage(2, 100, 50);
 makeOrderMessage(4, 300, 100);
 makeOrderMessage(10, 70, 200);
+
+
+
+
+static AccessLevel = {
+BASIC: "basic",
+SUPERUSER: "superuser",
+};
+
+blacklistedEmails = [];
+
+constructor({ email, accessLevel }) {
+super(email);
+this.accessLevel = accessLevel;
+}
+
+blacklist(email) {
+this.blacklistedEmails.push(email);
+}
+
+isBlacklisted(email) {
+return this.blacklistedEmails.includes(email);
+}
